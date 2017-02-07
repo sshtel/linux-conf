@@ -1,8 +1,5 @@
-if [ "$1" =  "clear" ]; then
-	echo clear .vimrc
-	rm -rf ~/.vimrc
-else
-
+rm -rf ~/.vimrc
+echo 'syntax enable' >> ~/.vimrc
 echo 'set autoindent' >> ~/.vimrc
 echo 'set cindent' >> ~/.vimrc
 echo 'set smartindent' >> ~/.vimrc
@@ -13,7 +10,11 @@ echo 'set sw=4' >> ~/.vimrc
 echo 'set sts=4' >> ~/.vimrc
 echo 'set nu' >> ~/.vimrc
 
-echo "colorscheme desert" >> ~/.vimrc
+mkdir ~/.vim/colors -p
+
+cp -f ./vim_color/* ~/.vim/colors
+#echo "colorscheme sialoquent" >> ~/.vimrc
+#echo "color desert" >> ~/.vimrc
 
 #echo "colorscheme blue" >> ~/.vimrc
 #echo "colorscheme delek" >> ~/.vimrc
@@ -34,4 +35,3 @@ echo "colorscheme desert" >> ~/.vimrc
 #echo "colorscheme ron" >> ~/.vimrc
 #echo "colorscheme torte" >> ~/.vimrc
 
-fi
