@@ -159,6 +159,7 @@ if !exists('g:not_finish_vimplug')
   colorscheme molokai
 endif
 
+set mouse=a
 set mousemodel=popup
 set t_Co=256
 set guioptions=egmrti
@@ -173,7 +174,7 @@ else
   let g:CSApprox_loaded = 1
 
   " IndentLine
-  let g:indentLine_enabled = 1
+  let g:indentLine_enabled = 0
   let g:indentLine_concealcursor = 0
   let g:indentLine_char = '┆'
   let g:indentLine_faster = 1
